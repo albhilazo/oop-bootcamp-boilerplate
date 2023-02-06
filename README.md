@@ -33,3 +33,7 @@ There are multiple ways to do it.
 1. “As a math student, I want to model the concept of rectangle”
 2. “As a math student, I want to model the concept of rectangle and calculate its perimeter”
 3. “As a math student, I also want to calculate the area of the rectangle”
+
+## Chance kata steps
+
+1. “As a math student, I want to calculate the chance of getting a 6 when rolling a dice”
