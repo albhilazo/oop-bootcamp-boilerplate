@@ -37,3 +37,4 @@ There are multiple ways to do it.
 ## Chance kata steps
 
 1. “As a math student, I want to calculate the chance of getting a 6 when rolling a dice”
+2. “As a math student, I want to calculate the chance of not getting a 6 when rolling a dice”
