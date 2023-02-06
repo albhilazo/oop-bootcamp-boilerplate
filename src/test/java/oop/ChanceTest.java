@@ -32,14 +32,16 @@ public class ChanceTest {
 
     @Test
     public void itShouldProvideProductOfTwoChances() {
-        double product = chance.productOf(0.5, 0.6);
-        assertEquals(0.3, product);
+        Chance chanceA = new Chance(0.5);
+        Chance actual = chanceA.productWith(new Chance(0.6));
+        assertEquals(0.3, actual.getValue());
     }
 
     @Test
     public void itShouldProvideLogicalOrOfTwoChances() {
-        double logicalOr = chance.logicalOrOf(0.5, 0.6);
-        assertEquals(0.8, logicalOr);
+        Chance chanceA = new Chance(0.5);
+        Chance actual = chanceA.logicalOrWith(new Chance(0.6));
+        assertEquals(0.8, actual.getValue());
     }
 
 }

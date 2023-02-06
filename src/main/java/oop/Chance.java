@@ -2,6 +2,19 @@ package oop;
 
 public class Chance {
 
+    private double value;
+
+    public Chance(double value) {
+        this.value = value;
+    }
+
+    public Chance() {
+    }
+
+    public double getValue() {
+        return value;
+    }
+
     public double forEvent6() {
         return (double) 1/(double) 6;
     }
@@ -10,12 +23,13 @@ public class Chance {
         return 1 - forEvent6();
     }
 
-    public double productOf(double chanceA, double chanceB) {
-        return chanceA * chanceB;
+    public Chance productWith(Chance ChanceB) {
+        return new Chance(value * ChanceB.getValue());
     }
 
-    public double logicalOrOf(double chanceA, double chanceB) {
-        return chanceA + chanceB - productOf(chanceA, chanceB);
+    public Chance logicalOrWith(Chance chanceB) {
+        double chanceBValue = chanceB.getValue();
+        return new Chance(value + chanceBValue - productWith(chanceB).getValue());
     }
 
 }
