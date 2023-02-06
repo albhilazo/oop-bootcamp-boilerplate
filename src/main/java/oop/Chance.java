@@ -9,4 +9,13 @@ public class Chance {
     public double forEventNot6() {
         return 1 - forEvent6();
     }
+
+    public double productOf(double chanceA, double chanceB) {
+        return chanceA * chanceB;
+    }
+
+    public double logicalOrOf(double chanceA, double chanceB) {
+        return chanceA + chanceB - productOf(chanceA, chanceB);
+    }
+
 }

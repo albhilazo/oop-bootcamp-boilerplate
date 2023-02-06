@@ -38,3 +38,5 @@ There are multiple ways to do it.
 
 1. “As a math student, I want to calculate the chance of getting a 6 when rolling a dice”
 2. “As a math student, I want to calculate the chance of not getting a 6 when rolling a dice”
+3. “As a math student, I want to calculate the product of two chances”
+4. “As a math student, I want to calculate the logical OR of two chances”
