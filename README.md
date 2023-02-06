@@ -25,3 +25,11 @@ There are multiple ways to do it.
 1. Command Line: Navigate to this project's root folder and run `./gradlew clean test`.
 2. IntelliJ IDEA - All tests: Open up the `Project` tab (Command+1) > right click the `src/test/java` folder > `Run 'All Tests'`.
 3. IntelliJ IDEA - Single test: Right click an individual test class and then `Run` it.
+
+# Steps
+
+## Rectangle kata steps
+
+1. “As a math student, I want to model the concept of rectangle”
+2. “As a math student, I want to model the concept of rectangle and calculate its perimeter”
+3. “As a math student, I also want to calculate the area of the rectangle”
