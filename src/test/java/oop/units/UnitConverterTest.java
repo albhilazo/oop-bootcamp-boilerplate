@@ -1,5 +1,6 @@
-package oop;
+package oop.units;
 
+import oop.units.UnitConverter;
 import org.junit.jupiter.api.Test;
 
 import static org.junit.jupiter.api.Assertions.assertEquals;
@@ -30,5 +31,11 @@ public class UnitConverterTest {
     public void itShouldConvertMetersToCentimeters() {
         double actualCentimeters = UnitConverter.toCentimeters(2);
         assertEquals(200, actualCentimeters, DELTA_TOLERANCE);
+    }
+
+    @Test
+    public void itShouldConvertGallonsToLiters() {
+        double actualLiters = UnitConverter.toLiters(4);
+        assertEquals(15.1416, actualLiters, DELTA_TOLERANCE);
     }
 }
