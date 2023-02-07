@@ -40,3 +40,7 @@ There are multiple ways to do it.
 2. “As a math student, I want to calculate the chance of not getting a 6 when rolling a dice”
 3. “As a math student, I want to calculate the product of two chances”
 4. “As a math student, I want to calculate the logical OR of two chances”
+
+## Unit conversion kata steps
+
+1. “I want to compare feet with meters, like: 5 ft = 1.524 m” (1 foot is 0.3048 meters)
