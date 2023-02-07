@@ -1,6 +1,5 @@
 package oop.units;
 
-import oop.units.UnitConverter;
 import org.junit.jupiter.api.Test;
 
 import static org.junit.jupiter.api.Assertions.assertEquals;
@@ -37,5 +36,20 @@ public class UnitConverterTest {
     public void itShouldConvertGallonsToLiters() {
         double actualLiters = UnitConverter.toLiters(4);
         assertEquals(15.1416, actualLiters, DELTA_TOLERANCE);
+    }
+
+    @Test
+    public void itShouldAddInches() {
+        DistanceUnit unit = new DistanceUnit(2, "inches");
+        DistanceUnit actualInches = unit.add(new DistanceUnit(2, "inches"));
+        assertEquals(4, actualInches.getValue());
+    }
+
+    @Test
+    public void itShouldAddDifferentUnits() {
+        DistanceUnit unit = new DistanceUnit(2, "inches");
+        DistanceUnit actualInches = unit.add(new DistanceUnit(1, "meters"));
+        assertEquals(41.37008, actualInches.getValue());
+        assertEquals("inches", actualInches.getUnitType());
     }
 }

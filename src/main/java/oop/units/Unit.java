@@ -1,9 +1,9 @@
-package oop;
+package oop.units;
 
-public class Unit {
+public abstract class Unit {
 
-    private final double value;
-    private final String unitType;
+    protected double value;
+    protected String unitType;
 
     public Unit(double value, String unit) {
         this.value = value;
@@ -16,9 +16,5 @@ public class Unit {
 
     public String getUnitType() {
         return unitType;
-    }
-
-    public Unit add(Unit unit) {
-        return new Unit(this.value + unit.getValue(), this.unitType);
     }
 }
