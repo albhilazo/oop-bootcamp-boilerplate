@@ -25,4 +25,10 @@ public class UnitConverterTest {
         double actualYards = UnitConverter.toYards(5);
         assertEquals(0.1389, actualYards, DELTA_TOLERANCE);
     }
+
+    @Test
+    public void itShouldConvertMetersToCentimeters() {
+        double actualCentimeters = UnitConverter.toCentimeters(2);
+        assertEquals(200, actualCentimeters, DELTA_TOLERANCE);
+    }
 }

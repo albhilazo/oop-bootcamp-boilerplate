@@ -44,3 +44,5 @@ There are multiple ways to do it.
 ## Unit conversion kata steps
 
 1. “I want to compare feet with meters, like: 5 ft = 1.524 m” (1 foot is 0.3048 meters)
+2. “I want to compare inches with yards, like: 5 in = 0.1389 yr” (1 inch is 0.0278 yards)
+3. “I want to compare meters with centimeters, like: 2 m = 200 cm” (1 meter is 100 centimeters)
