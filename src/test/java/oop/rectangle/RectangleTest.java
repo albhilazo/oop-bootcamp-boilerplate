@@ -1,5 +1,6 @@
-package oop;
+package oop.rectangle;
 
+import oop.rectangle.Rectangle;
 import org.junit.jupiter.api.BeforeEach;
 import org.junit.jupiter.api.Test;
 

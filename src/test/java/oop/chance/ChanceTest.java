@@ -1,5 +1,6 @@
-package oop;
+package oop.chance;
 
+import oop.chance.Chance;
 import org.junit.jupiter.api.BeforeEach;
 import org.junit.jupiter.api.Test;
 
