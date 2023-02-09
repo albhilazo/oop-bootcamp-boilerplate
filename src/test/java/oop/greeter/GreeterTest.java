@@ -32,4 +32,12 @@ public class GreeterTest {
         assertEquals("Hello Ted", actual);
     }
 
+    @Test
+    public void itShouldChangeMessageInTheMorning() {
+        String name = "Bill";
+        String actual = greeter.greet(name);
+
+        assertEquals("Good morning Bill", actual);
+    }
+
 }
