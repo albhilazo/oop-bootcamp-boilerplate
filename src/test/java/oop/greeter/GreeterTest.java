@@ -2,6 +2,8 @@ package oop.greeter;
 
 import org.junit.jupiter.api.BeforeEach;
 import org.junit.jupiter.api.Test;
+import org.junit.jupiter.params.ParameterizedTest;
+import org.junit.jupiter.params.provider.ValueSource;
 
 import java.time.LocalDateTime;
 import java.time.LocalTime;
@@ -41,9 +43,11 @@ public class GreeterTest {
         assertEquals("Hello Ted", actual);
     }
 
-    @Test
+    @ParameterizedTest
+    @ValueSource(strings = {"06:00","12:00"})
     public void itShouldChangeMessageInTheMorning() {
-        LocalTime morning = LocalTime.of(12, 00, 00);
+        LocalTime morning = LocalTime.parse("12:00");
+//        LocalTime morning = LocalTime.of(12, 00, 00);
         greeter = new Greeter(morning);
 
         String name = "Bill";
