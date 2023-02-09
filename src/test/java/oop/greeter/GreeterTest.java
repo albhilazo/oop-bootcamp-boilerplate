@@ -1,12 +1,21 @@
 package oop.greeter;
 
+import org.junit.jupiter.api.BeforeEach;
 import org.junit.jupiter.api.Test;
+
+import java.time.LocalDateTime;
+import java.time.LocalTime;
 
 import static org.junit.jupiter.api.Assertions.*;
 
 public class GreeterTest {
 
-    Greeter greeter = new Greeter();
+    Greeter greeter;
+
+    @BeforeEach
+    void setUp() {
+        greeter = new Greeter(LocalTime.now());
+    }
 
     @Test
     public void itShouldReturnHelloName() {
@@ -34,10 +43,35 @@ public class GreeterTest {
 
     @Test
     public void itShouldChangeMessageInTheMorning() {
+        LocalTime morning = LocalTime.of(12, 00, 00);
+        greeter = new Greeter(morning);
+
         String name = "Bill";
         String actual = greeter.greet(name);
 
         assertEquals("Good morning Bill", actual);
+    }
+
+    @Test
+    public void itShouldChangeMessageInTheEvening() {
+        LocalTime morning = LocalTime.of(18, 00, 00);
+        greeter = new Greeter(morning);
+
+        String name = "Philis";
+        String actual = greeter.greet(name);
+
+        assertEquals("Good evening Philis", actual);
+    }
+
+    @Test
+    public void itShouldChangeMessageInTheNightTime() {
+        LocalTime morning = LocalTime.of(23, 0, 1);
+        greeter = new Greeter(morning);
+
+        String name = "Marge";
+        String actual = greeter.greet(name);
+
+        assertEquals("Good night Marge", actual);
     }
 
 }
