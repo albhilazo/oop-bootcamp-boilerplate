@@ -28,17 +28,31 @@ public class Greeter {
     }
 
     private String greetingByTime() {
-        if (time.isAfter(LocalTime.of(6, 0, 0)) &&
-                time.isBefore(LocalTime.of(12, 0, 1))) {
+        if (isMorning()) {
             return MORNING;
-        } else if (time.isAfter(LocalTime.of(17, 59, 59)) &&
-                time.isBefore(LocalTime.of(22, 0, 1))) {
+        }
+        if (isEvening()) {
             return EVENING;
-        } else if (time.isAfter(LocalTime.of(22, 0, 0)) ||
-                time.isBefore(LocalTime.of(6, 0, 0))) {
+        }
+        if (isNight()) {
             return NIGHT;
         }
         return DEFAULT;
+    }
+
+    private boolean isMorning() {
+        return time.isAfter(LocalTime.of(6, 0, 0)) &&
+                time.isBefore(LocalTime.of(12, 0, 1));
+    }
+
+    private boolean isEvening() {
+        return time.isAfter(LocalTime.of(18, 00, 00)) &&
+                time.isBefore(LocalTime.of(22, 0, 1));
+    }
+
+    private boolean isNight() {
+        return time.isAfter(LocalTime.of(22, 0, 0)) ||
+                time.isBefore(LocalTime.of(6, 0, 1));
     }
 
 }

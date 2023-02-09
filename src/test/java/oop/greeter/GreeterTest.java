@@ -44,10 +44,9 @@ public class GreeterTest {
     }
 
     @ParameterizedTest
-    @ValueSource(strings = {"06:00","12:00"})
-    public void itShouldChangeMessageInTheMorning() {
-        LocalTime morning = LocalTime.parse("12:00");
-//        LocalTime morning = LocalTime.of(12, 00, 00);
+    @ValueSource(strings = {"06:00:01","12:00:00"})
+    public void itShouldChangeMessageInTheMorning(String time) {
+        LocalTime morning = LocalTime.parse(time);
         greeter = new Greeter(morning);
 
         String name = "Bill";
@@ -56,9 +55,10 @@ public class GreeterTest {
         assertEquals("Good morning Bill", actual);
     }
 
-    @Test
-    public void itShouldChangeMessageInTheEvening() {
-        LocalTime morning = LocalTime.of(18, 00, 00);
+    @ParameterizedTest
+    @ValueSource(strings = {"18:00:01","22:00:00"})
+    public void itShouldChangeMessageInTheEvening(String time) {
+        LocalTime morning = LocalTime.parse(time);
         greeter = new Greeter(morning);
 
         String name = "Philis";
@@ -67,9 +67,10 @@ public class GreeterTest {
         assertEquals("Good evening Philis", actual);
     }
 
-    @Test
-    public void itShouldChangeMessageInTheNightTime() {
-        LocalTime morning = LocalTime.of(23, 0, 1);
+    @ParameterizedTest
+    @ValueSource(strings = {"22:00:01","06:00:00"})
+    public void itShouldChangeMessageInTheNightTime(String time) {
+        LocalTime morning = LocalTime.parse(time);
         greeter = new Greeter(morning);
 
         String name = "Marge";
